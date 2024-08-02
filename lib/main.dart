@@ -28,7 +28,9 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: const Column(
-        children: [Text('Welcome to this beautiful Application')],
+        children: [
+          Text('Welcome to this beautiful Application'),
+        ],
       ),
     );
   }
