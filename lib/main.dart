@@ -1,5 +1,8 @@
 import "package:flutter/material.dart";
 import "package:flutter_riverpod/flutter_riverpod.dart";
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import "features/splash/presentation/pages/splash_screen.dart";
 
 void main() {
   runApp(
@@ -14,24 +17,14 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: const Column(
-        children: [
-          Text('Welcome to this beautiful Application'),
-        ],
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(375.0, 812.0),
+      builder: (_, child) {
+        return const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: SplashScreen(),
+        );
+      },
     );
   }
 }
