@@ -3,5 +3,8 @@ class ImageConstant {
 
   // Icons
 
-  static const splashImage = "assets/images/svg/splash_svg.svg";
+  static const splashImage = "assets/images/jpegs/splash-icon.png";
+
+
+
 }

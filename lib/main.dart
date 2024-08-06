@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:flutter_riverpod/flutter_riverpod.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import "features/splash/presentation/pages/splash_screen.dart";
+import "config/routes/router.dart";
 
 void main() {
   runApp(
@@ -21,8 +21,9 @@ class App extends StatelessWidget {
       designSize: const Size(375.0, 812.0),
       builder: (_, child) {
         return const MaterialApp(
+          onGenerateRoute: Routes.generateRoute,
           debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
+
         );
       },
     );
